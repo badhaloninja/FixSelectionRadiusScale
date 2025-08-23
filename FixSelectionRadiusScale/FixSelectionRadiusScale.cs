@@ -11,7 +11,7 @@ namespace FixSelectionRadiusScale
     {
         public override string Name => "FixSelectionRadiusScale";
         public override string Author => "badhaloninja";
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.1";
         public override string Link => "https://github.com/badhaloninja/FixSelectionRadiusScale";
 
         public override void OnEngineInit()
@@ -28,7 +28,6 @@ namespace FixSelectionRadiusScale
 
             static readonly float COLLIDER_SEARCH_RADIUS = 0.025f;
 
-            [HarmonyDebug]
             [HarmonyTranspiler]
             [HarmonyPatch("TryOpenGizmo")]
             public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
